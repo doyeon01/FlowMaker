@@ -1,3 +1,5 @@
+'use client'
+
 import Logo from '../../assets/common/logo.png'
 import Image from 'next/image'
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
@@ -15,15 +17,21 @@ const page = () => {
         <div className='text-[#757575] text-lg text-center mt-2'>손쉽게 맞춤형 챗봇을 생성, 배포, 관리해보세요.</div> 
         
         <div className="flex flex-col gap-4 items-center mt-8">
-          <div className="w-96 h-12 rounded-lg shadow-md bg-[#FFFFFF] flex justify-center items-center">
+          <div
+           className="w-96 h-12 rounded-lg shadow-md bg-[#FFFFFF] flex justify-center items-center cursor-pointer"
+           onClick={() => window.location.href = "https://k11c201.p.ssafy.io/oauth2/authorization/google"}>
             <FcGoogle className="text-2xl"/>
             <p className='text-base font-semibold'>Continue with Google</p>
           </div>
-          <div className="w-96 h-12 rounded-lg shadow-md bg-[#FEE500] flex justify-center items-center">
+          <div
+           className="w-96 h-12 rounded-lg shadow-md bg-[#FEE500] flex justify-center items-center cursor-pointer"
+           onClick={() => window.location.href = "https://k11c201.p.ssafy.io/oauth2/authorization/kakao"}>
             <RiKakaoTalkFill className="text-2xl"/>
             <p className='text-base font-semibold'>Continue with Kakao</p>
           </div>
-          <div className="w-96 h-12 rounded-lg shadow-md bg-[#000000] flex justify-center items-center">
+          <div
+           className="w-96 h-12 rounded-lg shadow-md bg-[#000000] flex justify-center items-center cursor-pointer"
+           onClick={() => window.location.href = "https://k11c201.p.ssafy.io/oauth2/authorization/github"}>
             <FaGithub className="text-2xl text-white"/>
             <p className='text-white text-base font-semibold'>Continue with GitHub</p>
           </div>
